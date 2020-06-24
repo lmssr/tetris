@@ -52,3 +52,15 @@ const heigth = 20
   let random = Math.floor(Math.random()*theTetrominoes.length)
   let current = theTetrominoes[random][currentRotation]
 })
+
+
+  //move the Tetromino moveDown
+  let currentPosition = 4
+  //draw the shape
+  function draw() {
+    current.forEach(index => {
+      squares[currentPosition + index].classList.add('block')
+      squares[currentPosition + index].style.backgroundImage = colors[random]
+    })
+  }
+
